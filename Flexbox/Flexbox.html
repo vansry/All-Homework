@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .menu {
+            display: flex;
+            flex-flow: row wrap;
+            /* flex-direction:column ; */
+            justify-content: space-evenly;
+        }
+
+        .item-box-1 {
+            width: 150px;
+            height: 100%;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(156, 41, 12);
+            flex-grow: 1;
+            text-align: center;
+            color: whitesmoke;
+        }
+        .menu-1 {
+            display: flex;      
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+            
+        .item-box-2 {
+            width: 150px;
+            height: 100%;
+            margin: 10px;
+            padding: 10px;
+            background-color: rgb(156, 41, 12);
+            flex-grow: 1;
+            text-align: center;
+            color: whitesmoke;
+        }
+        #order-3{
+            order: -1;
+            flex-flow: column wrap;
+            color: rgb(31, 16, 241);
+            background-color: yellow; ;
+        }
+    </style>
+    <!-- =========================================================== -->
+    <title>Flex Box CSS</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <div class="item-box-1">Simple-01</div>
+            <div class="item-box-1">Simple-02</div>
+            <div class="item-box-1">Simple-03</div>
+        </div>
+        <div class="menu-1">
+            <div id="order-1" class="item-box-2">
+                Simple-04 <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, laborum? Perspiciatis,
+                voluptatibus laborum. Ullam, sint sit! Sapiente blanditiis cumque aspernatur quaerat tempore impedit?
+                Minima, eaque corrupti? Sunt laborum nesciunt quod?
+            </div>
+            <div id="order-2" class="item-box-2">
+                Simple-05 <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum cumque adipisci sint, doloribus
+                laudantium laborum expedita ab, eligendi corrupti dolor nulla impedit nobis reiciendis dolore a nisi aut
+                ratione odio.
+            </div>
+            <div id="order-3" class="item-box-2">
+                Simple-06 <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis modi inventore harum,
+                quam earum natus veritatis voluptatem corporis, nam voluptatum officia labore odio consequuntur tempora
+                a dolor impedit architecto? Autem.
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

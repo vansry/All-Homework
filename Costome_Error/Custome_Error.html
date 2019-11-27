@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Custom Error</title>
+</head>
+
+<body>
+    <h2>Log in</h2>
+    Username : <input type="text" id="username"> <br><br>
+    Password :  <input type="password" id="password"> <br><br>
+    <input type="submit" value="Submit" id="submit">
+    <h4 id="message"> </h4>
+
+    <script>
+        var username = document.getElementById('username');
+        var password = document.getElementById('password');
+        var button = document.getElementById('submit');
+        var msg = document.getElementById('message');
+        var color_Text;
+        function validation() {
+            try {
+                if (username.value == "" && password.value == "") {
+                    color_Text = true;
+                    throw "Username & Password cannot be empty!";
+                }
+                if (username.value == "" || !(isNaN(username.value))) {
+                    color_Text = true;
+                    throw "Username cannot be empty or a number!";
+                }
+                if (password.value == "" || password.value.length < 6) {
+                    color_Text = true;
+                    throw "Password cannot be empty or less than 6 characters long!";
+                } else {
+                    color_Text = false;
+                    throw "Success!";
+                }
+            } catch (error) {
+                if (color_Text == true) {
+                    msg.innerHTML = error;
+                    msg.style.color = 'red';
+                } else {
+                    msg.innerHTML = error;
+                    msg.style.color = 'green';
+                }
+            }
+        }
+        button.onclick = function () {
+            validation();
+            console.log(typeof (username.value));
+        }
+    </script>
+</body>
+
+</html>
